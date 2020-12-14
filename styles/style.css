@@ -247,10 +247,31 @@ section:nth-of-type(odd) {
 		font-size: 20px;
 	}
 
+	#s-pricing:target,
+	#s-project:target,
+	#s-team:target,
+	#s-contact:target {
+		position: relative;
+		z-index: 20;
+	}
+
 	.logo-img,
 	.main-nav,
 	.social-links {
 		display: none;
+	}
+
+	.main-nav {
+		position: relative;
+	}
+
+	#mobile-menu-trriger:checked~.navbar>.container>.main-nav>.hidden-label {
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		right: 0;
+		left: 0;
+		z-index: 1;
 	}
 
 	#mobile-menu-trriger:checked~.navbar>.container>.logo,
@@ -261,6 +282,7 @@ section:nth-of-type(odd) {
 	#mobile-menu-trriger:checked~.navbar>.container>.fa-times {
 		display: block;
 		margin: 5px auto;
+		margin-top: 50px;
 		font-size: 20px;
 		align-self: start;
 	}
@@ -272,7 +294,7 @@ section:nth-of-type(odd) {
 		right: 0;
 		left: 0;
 		background-color: #fff;
-		z-index: 100;
+		z-index: 10;
 	}
 
 	#mobile-menu-trriger:checked~.navbar>.container {
@@ -308,12 +330,28 @@ section:nth-of-type(odd) {
 		font-size: 20px;
 	}
 
-	/* Пункты меню не уменьшала, так как на мобильном получается мелко, а места хватает. Так же и иконки сделала больше, чем на макете */
 
-	#mobile-menu-trriger:checked~main,
+
+	/* #s-pricing:target .navbar {
+		position: relative;
+	} */
+
+
+	/* #mobile-menu-trriger:checked~main,
 	#mobile-menu-trriger:checked~footer {
 		position: fixed;
-	}
+	} */
+
+
+	/* #mobile-menu-trriger:checked~.navbar section:target {}
+
+	.nav-link:focus .navbar {
+		position: relative;
+	} */
+
+	/* .nav-link:focus #mobile-menu-trriger:checked~.navbar {
+		position: static;
+	} */
 }
 
 /* ===== Styles Hero-section ===== */
@@ -368,7 +406,6 @@ section:nth-of-type(odd) {
 
 @media screen and (max-width: 767px) {
 	.hero-section {
-		min-height: 55vh;
 		background-image: linear-gradient(220deg, #FFFFFF, #DADADA);
 	}
 

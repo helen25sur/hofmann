@@ -261,8 +261,6 @@ section:nth-of-type(odd) {
 	#mobile-menu-trriger:checked~.navbar>.container>.fa-times {
 		display: block;
 		margin: 5px auto;
-		/* margin-top: 50px;
-		margin-bottom: -60px; */
 		font-size: 20px;
 		align-self: start;
 	}
@@ -310,6 +308,11 @@ section:nth-of-type(odd) {
 	}
 
 	/* Пункты меню не уменьшала, так как на мобильном получается мелко, а места хватает. Так же и иконки сделала больше, чем на макете */
+
+	#mobile-menu-trriger:checked~main,
+	#mobile-menu-trriger:checked~footer {
+		position: fixed;
+	}
 }
 
 /* ===== Styles Hero-section ===== */

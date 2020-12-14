@@ -16,6 +16,7 @@ body {
 	font-weight: normal;
 	font-size: 16px;
 	line-height: 24px;
+	color: #4B4B4B;
 }
 
 section:nth-of-type(even) {
@@ -110,8 +111,27 @@ section:nth-of-type(odd) {
 }
 
 @media screen and (max-width: 767px) {
+	body {
+		font-size: 11px;
+		line-height: 16px;
+	}
+
 	.container {
 		max-width: 90%;
+	}
+
+	.section-title {
+		font-size: 20px;
+		line-height: 24px;
+		letter-spacing: -0.8px;
+	}
+
+	.btn {
+		max-width: 130px;
+		max-height: 32px;
+		padding: 8px;
+		font-size: 11px;
+		line-height: 13px;
 	}
 }
 
@@ -272,14 +292,8 @@ section:nth-of-type(odd) {
 		align-items: center;
 	}
 
-	/* #mobile-menu-trriger:checked~main.content {
-		overflow: hidden;
-	} */
-
 	.nav-link {
 		text-transform: none;
-		font-size: 16px;
-		line-height: 20px;
 	}
 
 	.nav-link+.nav-link {
@@ -292,8 +306,10 @@ section:nth-of-type(odd) {
 	}
 
 	.soc-link {
-		font-size: 16px;
+		font-size: 20px;
 	}
+
+	/* Пункты меню не уменьшала, так как на мобильном получается мелко, а места хватает. Так же и иконки сделала больше, чем на макете */
 }
 
 /* ===== Styles Hero-section ===== */
@@ -346,7 +362,27 @@ section:nth-of-type(odd) {
 	}
 }
 
-@media screen and (max-width: 767px) {}
+@media screen and (max-width: 767px) {
+	.hero-section {
+		min-height: 55vh;
+		background-image: linear-gradient(220deg, #FFFFFF, #DADADA);
+	}
+
+	.slogan-text {
+		margin-top: 15px;
+		margin-bottom: 28px;
+	}
+
+	.hero-buttons-block {
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.hero-button+.hero-button {
+		margin-left: 0;
+		margin-top: 16px;
+	}
+}
 
 /* ===== Styles Pricing-section ===== */
 

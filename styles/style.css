@@ -247,13 +247,17 @@ section:nth-of-type(odd) {
 		font-size: 20px;
 	}
 
-	#s-pricing:target,
+	/* #s-pricing:target,
 	#s-project:target,
 	#s-team:target,
 	#s-contact:target {
 		position: relative;
 		z-index: 20;
 	}
+
+	#s-pricing:target .navbar {
+		transition: translateY(-100%);
+	} */
 
 	.logo-img,
 	.main-nav,
@@ -265,14 +269,14 @@ section:nth-of-type(odd) {
 		position: relative;
 	}
 
-	#mobile-menu-trriger:checked~.navbar>.container>.main-nav>.hidden-label {
+	/* #mobile-menu-trriger:checked~.navbar>.container>.main-nav>.hidden-label {
 		position: absolute;
 		top: 0;
 		bottom: 0;
 		right: 0;
 		left: 0;
 		z-index: 1;
-	}
+	} */
 
 	#mobile-menu-trriger:checked~.navbar>.container>.logo,
 	#mobile-menu-trriger:checked~.navbar>.container>.fa-bars {

@@ -255,10 +255,6 @@ section:nth-of-type(odd) {
 		z-index: 20;
 	}
 
-	/* #s-pricing:target .navbar {
-		transition: translateY(-100%);
-	} */
-
 	.logo-img,
 	.main-nav,
 	.social-links {
@@ -334,28 +330,6 @@ section:nth-of-type(odd) {
 		font-size: 20px;
 	}
 
-
-
-	/* #s-pricing:target .navbar {
-		position: relative;
-	} */
-
-
-	/* #mobile-menu-trriger:checked~main,
-	#mobile-menu-trriger:checked~footer {
-		position: fixed;
-	} */
-
-
-	/* #mobile-menu-trriger:checked~.navbar section:target {}
-
-	.nav-link:focus .navbar {
-		position: relative;
-	} */
-
-	/* .nav-link:focus #mobile-menu-trriger:checked~.navbar {
-		position: static;
-	} */
 }
 
 /* ===== Styles Hero-section ===== */
@@ -739,7 +713,64 @@ input[name="type-design"] {
 
 }
 
-@media screen and (max-width: 767px) {}
+@media screen and (max-width: 767px) {
+
+	.product-design-section,
+	.graphic-design-section,
+	.interior-design-section,
+	.web-design-section,
+	.app-design-section {
+		animation: none;
+	}
+
+	.our-project-section {
+		padding: 28px 0;
+	}
+
+	.our-project-section .section-title {
+		margin-bottom: 16px;
+	}
+
+	.our-project-section details {
+		display: flex;
+	}
+
+	.list-theme-project {
+		flex-direction: column;
+		text-align: center;
+	}
+
+	/* .item-theme-project:first-of-type {
+		border: 1px solid #4B4B4B;
+		border-radius: 48px;
+		padding: 4px;
+	} */
+
+	.theme-project-link {
+		font-size: 14px;
+		line-height: 16px;
+	}
+
+	.views-likes-comments-block {
+		display: none;
+	}
+
+	.design-list {
+		grid-template:
+			repeat(auto-fill, 106px) / repeat(auto-fill, 140px);
+		justify-content: center;
+		padding-top: 16px;
+		gap: 12px 10px;
+	}
+
+	.design-list-item {
+		grid-template-rows: 1fr;
+	}
+
+	.design-photo {
+		border-radius: 4px;
+	}
+}
 
 /* ===== Styles Our team-section ===== */
 

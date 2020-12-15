@@ -584,10 +584,6 @@ section:nth-of-type(odd) {
 	margin-bottom: 33px;
 }
 
-.mobile-theme {
-	display: none;
-}
-
 .list-theme-project {
 	padding: 0 9%;
 }
@@ -691,10 +687,6 @@ input[name="type-design"] {
 		margin-bottom: 20px;
 	}
 
-	.mobile-theme {
-		display: none;
-	}
-
 	.list-theme-project {
 		padding: 0 8%;
 		flex-basis: 596px;
@@ -733,58 +725,51 @@ input[name="type-design"] {
 
 	.our-project-section {
 		padding: 28px 0;
+		text-align: center;
 	}
 
 	.our-project-section .section-title {
 		margin-bottom: 16px;
 	}
 
-	ul.list-theme-project {
-		display: none;
+	.list-theme-project {
+		display: inline-flex;
+		flex-direction: column;
+		max-width: 46vw;
+		padding: 4px 12px;
+		margin: 0 auto;
 	}
 
-	.mobile-theme {
+	.list-theme-project:hover .item-theme-project:not(:first-of-type) {
 		display: block;
+	}
+
+	.item-theme-project {
 		margin: 0 auto;
-		padding: 4px 12px;
+		padding: 4px;
+	}
+
+	.item-theme-project:first-of-type {
+		padding-right: 24px;
 		border: 1px solid #4B4B4B;
 		border-radius: 48px;
+		background-image: url('../assets/images/svg/triangle.svg');
+		background-repeat: no-repeat;
+		background-position: 95% 50%;
 	}
 
-	option[value="product-design"]:not(:checked)~.product-design-section,
-	.graphic-design-section,
-	.interior-design-section,
-	.web-design-section,
-	.app-design-section {
+	.item-theme-project+.item-theme-project {
 		display: none;
 	}
 
-
-	option[value="product-design"]:checked~.product-design-section,
-	option[value="graphic-design"]:checked~.graphic-design-section,
-	option[value="interior-design"]:checked~.interior-design-section,
-	option.web-design:checked~.web-design-section,
-	option.app-design:checked~.app-design-section {
-		display: block;
+	.theme-project-link {
+		font-size: 12px;
+		line-height: 16px;
+		text-align: center;
+		letter-spacing: 0.8px;
 	}
 
-
-
-	/* #product-design-trigger:not(:checked)~.product-design-section,
-	.graphic-design-section,
-	.interior-design-section,
-	.web-design-section,
-	.app-design-section {
-		display: none;
-	}
-	
-	#product-design-trigger:checked~.product-design-section,
-	#graphic-design-trigger:checked~.graphic-design-section,
-	#interior-design-trigger:checked~.interior-design-section,
-	#web-design-trigger:checked~.web-design-section,
-	#app-design-trigger:checked~.app-design-section {
-		display: block;
-	} */
+	/* Оформила как-будто выпадающий список, так как сначала хотела сверстать второй блок в виде select>option но так не сработало, перестал работать переход по вкладкам, поэтому ради того, чтобы оставить хоть такую функциональность, пришлось реализовывать таким образом */
 
 	.views-likes-comments-block {
 		display: none;

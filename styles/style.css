@@ -599,7 +599,7 @@ section:nth-of-type(odd) {
 	}
 
 	.silver {
-		transform: translate3d(45px, -40px, -120px);
+		transform: translate3d(50px, -40px, -120px);
 	}
 
 	.gold {
@@ -664,12 +664,12 @@ section:nth-of-type(odd) {
 	}
 
 	#price-gold-trigger:checked~.pricing-plan-list>.gold {
-		transform: translate3d(-140px, 0px, 10px);
+		transform: translate3d(-135px, 0px, 10px);
 		/* transition: transform 1s ease-out; */
 	}
 
 	#price-silver-trigger:checked~.pricing-plan-list>.silver {
-		transform: translate3d(45px, 0px, 10px);
+		transform: translate3d(50px, 0px, 10px);
 		/* transition: transform 1s ease-out; */
 	}
 
@@ -677,16 +677,20 @@ section:nth-of-type(odd) {
 		transform: translate3d(-140px, -35px, -100px);
 	}
 
+	#price-silver-trigger:checked~.pricing-plan-list>.platinum {
+		transform: translate3d(-330px, -85px, -250px);
+	}
+
 	#price-platinum-trigger:checked~.pricing-plan-list>.platinum {
-		transform: translate3d(-325px, -0px, 10px);
+		transform: translate3d(-315px, -0px, 10px);
 	}
 
 	#price-platinum-trigger:checked~.pricing-plan-list>.gold {
-		transform: translate3d(-140px, -35px, -100px);
+		transform: translate3d(-130px, -35px, -100px);
 	}
 
 	#price-platinum-trigger:checked~.pricing-plan-list>.silver {
-		transform: translate3d(45px, -85px, -250px);
+		transform: translate3d(55px, -85px, -250px);
 	}
 
 	.label-choice-price {

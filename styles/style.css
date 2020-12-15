@@ -433,7 +433,7 @@ section:nth-of-type(odd) {
 
 .silver {
 	background-image:
-		linear-gradient(44deg, rgba(75, 75, 75) 20%, rgba(128, 128, 128) 100%);
+		linear-gradient(44deg, rgb(75, 75, 75) 20%, rgb(128, 128, 128) 100%);
 }
 
 .gold {
@@ -517,8 +517,8 @@ section:nth-of-type(odd) {
 	letter-spacing: 1px;
 }
 
-.choise-price[type="radio"],
-.label-choise-price {
+.choice-price[type="radio"],
+.label-choice-price {
 	display: none;
 }
 
@@ -599,15 +599,15 @@ section:nth-of-type(odd) {
 	}
 
 	.silver {
-		transform: translate3d(50px, -40px, -120px);
+		transform: translate3d(45px, -40px, -120px);
 	}
 
 	.gold {
-		transform: translateX(-135px);
+		transform: translate3d(-135px, 0, 0);
 	}
 
 	.platinum {
-		transform: translate3d(-320px, -85px, -250px);
+		transform: translate3d(-325px, -85px, -250px);
 
 	}
 
@@ -648,11 +648,11 @@ section:nth-of-type(odd) {
 		max-width: 140px;
 	}
 
-	.block-labels-choise {
+	.block-labels-choice {
 		justify-content: space-around;
 	}
 
-	.label-choise-price {
+	.label-choice-price {
 		display: inline-block;
 		margin-top: 40px;
 		font-size: 12px;
@@ -663,25 +663,54 @@ section:nth-of-type(odd) {
 		color: #4B4B4B;
 	}
 
+	#price-gold-trigger:checked~.pricing-plan-list>.gold {
+		transform: translate3d(-140px, 0px, 10px);
+		/* transition: transform 1s ease-out; */
+	}
+
 	#price-silver-trigger:checked~.pricing-plan-list>.silver {
-		transform: translate3d(50px, 0px, 10px);
+		transform: translate3d(45px, 0px, 10px);
 		/* transition: transform 1s ease-out; */
 	}
 
 	#price-silver-trigger:checked~.pricing-plan-list>.gold {
-		transform: translate3d(-135px, -35px, -100px);
+		transform: translate3d(-140px, -35px, -100px);
 	}
 
 	#price-platinum-trigger:checked~.pricing-plan-list>.platinum {
-		transform: translate3d(-320px, -0px, 0px);
+		transform: translate3d(-325px, -0px, 10px);
 	}
 
 	#price-platinum-trigger:checked~.pricing-plan-list>.gold {
-		transform: translate3d(-135px, -35px, -100px);
+		transform: translate3d(-140px, -35px, -100px);
 	}
 
 	#price-platinum-trigger:checked~.pricing-plan-list>.silver {
-		transform: translate3d(50px, -85px, -250px);
+		transform: translate3d(45px, -85px, -250px);
+	}
+
+	.label-choice-price {
+		border-radius: 48px;
+		background-color: transparent;
+		padding: 4px 23px;
+	}
+
+	#price-silver-trigger:checked~.block-labels-choice>.choice-silver {
+		background-image:
+			linear-gradient(44deg, rgb(75, 75, 75) 20%, rgb(128, 128, 128) 100%);
+		color: #EBCB80;
+	}
+
+	#price-gold-trigger:checked~.block-labels-choice>.choice-gold {
+		background-image:
+			linear-gradient(45deg, rgb(235, 203, 128) 0%, rgb(245, 228, 189) 100%);
+		color: #4B4B4B;
+	}
+
+	#price-platinum-trigger:checked~.block-labels-choice>.choice-platinum {
+		background-image:
+			linear-gradient(43deg, rgb(38, 38, 38) 15%, rgb(89, 89, 89) 100%);
+		color: #EBCB80;
 	}
 }
 

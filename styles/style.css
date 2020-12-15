@@ -596,9 +596,7 @@ section:nth-of-type(odd) {
 		padding-top: 14px;
 	}
 
-	.pricing-list-item:hover {
-		transform: none;
-	}
+
 
 	.silver {
 		transform: translate3d(-188px, -39px, -120px);
@@ -721,6 +719,10 @@ section:nth-of-type(odd) {
 		background-image:
 			linear-gradient(43deg, rgb(38, 38, 38) 15%, rgb(89, 89, 89) 100%);
 		color: #EBCB80;
+	}
+
+	.pricing-list-item:hover {
+		transform: none;
 	}
 }
 

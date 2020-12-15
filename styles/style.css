@@ -722,7 +722,7 @@ section:nth-of-type(odd) {
 	}
 
 	.pricing-list-item:hover {
-		transform: none;
+		transform: scale(1);
 	}
 }
 

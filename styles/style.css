@@ -611,7 +611,18 @@ section:nth-of-type(odd) {
 	.platinum {
 		transform: translate3d(-380px, -82px, -240px);
 		order: 3;
+	}
 
+	.silver:hover {
+		transform: scale(1) translate3d(-188px, -39px, -120px);
+	}
+
+	.gold:hover {
+		transform: scale(1) translate3d(4px, 0, 3px);
+	}
+
+	.platinum:hover {
+		transform: scale(1) translate3d(-380px, -82px, -240px);
 	}
 
 	.plan-name {
@@ -721,9 +732,9 @@ section:nth-of-type(odd) {
 		color: #EBCB80;
 	}
 
-	.pricing-list-item:hover {
+	/* .pricing-list-item:hover {
 		transform: scale(1);
-	}
+	} */
 }
 
 /* ===== Styles Our project-section ===== */

@@ -584,6 +584,10 @@ section:nth-of-type(odd) {
 	margin-bottom: 33px;
 }
 
+.mobile-theme {
+	display: none;
+}
+
 .list-theme-project {
 	padding: 0 9%;
 }
@@ -687,6 +691,10 @@ input[name="type-design"] {
 		margin-bottom: 20px;
 	}
 
+	.mobile-theme {
+		display: none;
+	}
+
 	.list-theme-project {
 		padding: 0 8%;
 		flex-basis: 596px;
@@ -731,25 +739,52 @@ input[name="type-design"] {
 		margin-bottom: 16px;
 	}
 
-	.our-project-section details {
-		display: flex;
+	ul.list-theme-project {
+		display: none;
 	}
 
-	.list-theme-project {
-		flex-direction: column;
-		text-align: center;
-	}
-
-	/* .item-theme-project:first-of-type {
+	.mobile-theme {
+		display: block;
+		margin: 0 auto;
+		padding: 4px 12px;
 		border: 1px solid #4B4B4B;
 		border-radius: 48px;
-		padding: 4px;
-	} */
-
-	.theme-project-link {
-		font-size: 14px;
-		line-height: 16px;
 	}
+
+	option[value="product-design"]:not(:checked)~.product-design-section,
+	.graphic-design-section,
+	.interior-design-section,
+	.web-design-section,
+	.app-design-section {
+		display: none;
+	}
+
+
+	option[value="product-design"]:checked~.product-design-section,
+	option[value="graphic-design"]:checked~.graphic-design-section,
+	option[value="interior-design"]:checked~.interior-design-section,
+	option.web-design:checked~.web-design-section,
+	option.app-design:checked~.app-design-section {
+		display: block;
+	}
+
+
+
+	/* #product-design-trigger:not(:checked)~.product-design-section,
+	.graphic-design-section,
+	.interior-design-section,
+	.web-design-section,
+	.app-design-section {
+		display: none;
+	}
+	
+	#product-design-trigger:checked~.product-design-section,
+	#graphic-design-trigger:checked~.graphic-design-section,
+	#interior-design-trigger:checked~.interior-design-section,
+	#web-design-trigger:checked~.web-design-section,
+	#app-design-trigger:checked~.app-design-section {
+		display: block;
+	} */
 
 	.views-likes-comments-block {
 		display: none;
@@ -765,6 +800,7 @@ input[name="type-design"] {
 
 	.design-list-item {
 		grid-template-rows: 1fr;
+		box-shadow: none;
 	}
 
 	.design-photo {

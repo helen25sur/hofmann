@@ -157,31 +157,52 @@
 
 				<input type="radio" name="type-design" class="app-design" id="app-design-trigger">
 
-				<details open>
-					<summary class="summ-theme"> </summary>
-					<ul class="list-theme-project f-row">
+				<ul class="list-theme-project f-row">
+					<li class="item-theme-project">
+						<label class="theme-project-link g-t-color product" for="product-design-trigger">Product design</label>
+					</li>
 
-						<li class="item-theme-project">
-							<label class="theme-project-link g-t-color product" for="product-design-trigger">Product design</label>
-						</li>
+					<li class="item-theme-project">
+						<label class="theme-project-link g-t-color graphic" for="graphic-design-trigger">Graphic design</label>
+					</li>
 
-						<li class="item-theme-project">
-							<label class="theme-project-link g-t-color graphic" for="graphic-design-trigger">Graphic design</label>
-						</li>
+					<li class="item-theme-project">
+						<label class="theme-project-link g-t-color interior" for="interior-design-trigger"> Interior design
+						</label>
+					</li>
 
-						<li class="item-theme-project">
-							<label class="theme-project-link g-t-color interior" for="interior-design-trigger"> Interior design
-							</label>
-						</li>
+					<li class="item-theme-project">
+						<label class="theme-project-link g-t-color web" for="web-design-trigger">Web design</label>
+					</li>
 
-						<li class="item-theme-project">
-							<label class="theme-project-link g-t-color web" for="web-design-trigger">Web design</label>
-						</li>
+					<li class="item-theme-project">
+						<label class="theme-project-link g-t-color app" for="app-design-trigger">App design</label></li>
+				</ul>
 
-						<li class="item-theme-project">
-							<label class="theme-project-link g-t-color app" for="app-design-trigger">App design</label></li>
-					</ul>
-				</details>
+				<!-- Для мобильного варианта -->
+				<form action="#" method="post">
+					<select name="theme-project" class="mobile-theme list-theme-project f-row">
+						<option value="product-design">Product design
+							<!-- <label class="theme-project-link g-t-color product" for="product-design-trigger"></label> -->
+						</option>
+
+						<option value="graphic-design">Graphic design
+							<!-- <label class="theme-project-link g-t-color graphic" for="graphic-design-trigger"></label> -->
+						</option>
+
+						<option value="interior-design">Interior design
+							<!-- <label class="theme-project-link g-t-color interior" for="interior-design-trigger"> 
+						</label> -->
+						</option>
+
+						<option class="item-theme-project web-design">Web design
+							<!-- <label class="theme-project-link g-t-color web" for="web-design-trigger"></label> -->
+						</option>
+
+						<option class="item-theme-project app-design">App design
+							<!-- <label class="theme-project-link g-t-color app" for="app-design-trigger"></label></option> -->
+					</select>
+				</form>
 				<!-- Section product design -->
 
 				<section class="product-design-section wow animate__animated animate__fadeInRight">

@@ -582,14 +582,16 @@ section:nth-of-type(odd) {
 	}
 
 	.pricing-plan-list {
+		max-width: 200px;
+		max-height: 300px;
 		flex-wrap: nowrap;
-		align-items: center;
+		margin: 0 auto;
 		transform-style: preserve-3d;
 		perspective: 600px;
 	}
 
 	.pricing-list-item {
-		width: 192px;
+		min-width: 192px;
 		padding: 28px 23px;
 		padding-top: 14px;
 	}
@@ -599,15 +601,18 @@ section:nth-of-type(odd) {
 	}
 
 	.silver {
-		transform: translate3d(50px, -40px, -120px);
+		transform: translate3d(-188px, -39px, -120px);
+		order: 2;
 	}
 
 	.gold {
-		transform: translate3d(-135px, 0, 0);
+		transform: translate3d(4px, 0, 3px);
+		order: 1;
 	}
 
 	.platinum {
-		transform: translate3d(-325px, -85px, -250px);
+		transform: translate3d(-380px, -82px, -240px);
+		order: 3;
 
 	}
 
@@ -664,14 +669,14 @@ section:nth-of-type(odd) {
 		color: #4B4B4B;
 	}
 
-	#price-gold-trigger:checked~.pricing-plan-list>.gold {
+	/* #price-gold-trigger:checked~.pricing-plan-list>.gold {
 		transform: translate3d(-135px, 0px, 10px);
-		/* transition: transform 1s ease-out; */
+		
 	}
 
 	#price-silver-trigger:checked~.pricing-plan-list>.silver {
 		transform: translate3d(50px, 0px, 10px);
-		/* transition: transform 1s ease-out; */
+		
 	}
 
 	#price-silver-trigger:checked~.pricing-plan-list>.gold {
@@ -692,7 +697,7 @@ section:nth-of-type(odd) {
 
 	#price-platinum-trigger:checked~.pricing-plan-list>.silver {
 		transform: translate3d(55px, -85px, -250px);
-	}
+	} */
 
 	.label-choice-price {
 		border-radius: 48px;

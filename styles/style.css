@@ -928,8 +928,14 @@ input[name="type-design"] {
 		display: none;
 	} */
 
-	.list-theme-project:hover .item-theme-project:not(:first-of-type) {
+
+
+	.list-theme-project:hover .item-theme-project {
 		display: block;
+	}
+
+	.item-theme-project:not(:focus) {
+		display: none;
 	}
 
 	.item-theme-project {
@@ -944,7 +950,7 @@ input[name="type-design"] {
 	#web-design-trigger:checked~.list-theme-project .item-web,
 	#app-design-trigger:checked~.list-theme-project .item-app {
 		order: 1;
-		display: inline-block;
+		display: block;
 		width: max-content;
 		padding: 4px 12px;
 		padding-right: 18px;
@@ -954,12 +960,6 @@ input[name="type-design"] {
 		background-repeat: no-repeat;
 		background-position: 95% 50%;
 	}
-
-	.item-theme-project+.item-theme-project {
-		display: none;
-	}
-
-
 
 	.theme-project-link {
 		font-size: 12px;

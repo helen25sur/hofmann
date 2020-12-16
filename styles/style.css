@@ -2,10 +2,10 @@
 	font-family: 'Montserrat';
 	src: url('../assets/fonts/Montserrat-Regular.eot');
 	src: local('../assets/fonts/Montserrat Regular'), local('Montserrat-Regular'),
-					url('../assets/fonts/Montserrat-Regular.eot?#iefix') format('embedded-opentype'),
-					url('../assets/fonts/Montserrat-Regular.woff2') format('woff2'),
-					url('../assets/fonts/Montserrat-Regular.woff') format('woff'),
-					url('../assets/fonts/Montserrat-Regular.ttf') format('truetype');
+		url('../assets/fonts/Montserrat-Regular.eot?#iefix') format('embedded-opentype'),
+		url('../assets/fonts/Montserrat-Regular.woff2') format('woff2'),
+		url('../assets/fonts/Montserrat-Regular.woff') format('woff'),
+		url('../assets/fonts/Montserrat-Regular.ttf') format('truetype');
 	font-weight: normal;
 	font-style: normal;
 	font-display: swap;
@@ -15,10 +15,10 @@
 	font-family: 'Montserrat';
 	src: url('../assets/fonts/Montserrat-Bold.eot');
 	src: local('../assets/fonts/Montserrat Bold'), local('Montserrat-Bold'),
-					url('../assets/fonts/Montserrat-Bold.eot?#iefix') format('embedded-opentype'),
-					url('../assets/fonts/Montserrat-Bold.woff2') format('woff2'),
-					url('../assets/fonts/Montserrat-Bold.woff') format('woff'),
-					url('../assets/fonts/Montserrat-Bold.ttf') format('truetype');
+		url('../assets/fonts/Montserrat-Bold.eot?#iefix') format('embedded-opentype'),
+		url('../assets/fonts/Montserrat-Bold.woff2') format('woff2'),
+		url('../assets/fonts/Montserrat-Bold.woff') format('woff'),
+		url('../assets/fonts/Montserrat-Bold.ttf') format('truetype');
 	font-weight: bold;
 	font-style: normal;
 	font-display: swap;
@@ -28,10 +28,10 @@
 	font-family: 'Source Sans Pro';
 	src: url('../assets/fonts/SourceSansPro-Bold.eot');
 	src: local('../assets/fonts/Source Sans Pro Bold'), local('SourceSansPro-Bold'),
-					url('../assets/fonts/SourceSansPro-Bold.eot?#iefix') format('embedded-opentype'),
-					url('../assets/fonts/SourceSansPro-Bold.woff2') format('woff2'),
-					url('../assets/fonts/SourceSansPro-Bold.woff') format('woff'),
-					url('../assets/fonts/SourceSansPro-Bold.ttf') format('truetype');
+		url('../assets/fonts/SourceSansPro-Bold.eot?#iefix') format('embedded-opentype'),
+		url('../assets/fonts/SourceSansPro-Bold.woff2') format('woff2'),
+		url('../assets/fonts/SourceSansPro-Bold.woff') format('woff'),
+		url('../assets/fonts/SourceSansPro-Bold.ttf') format('truetype');
 	font-weight: bold;
 	font-style: normal;
 	font-display: swap;
@@ -41,10 +41,10 @@
 	font-family: 'Source Sans Pro';
 	src: url('../assets/fonts/SourceSansPro-Regular.eot');
 	src: local('../assets/fonts/Source Sans Pro Regular'), local('SourceSansPro-Regular'),
-					url('../assets/fonts/SourceSansPro-Regular.eot?#iefix') format('embedded-opentype'),
-					url('../assets/fonts/SourceSansPro-Regular.woff2') format('woff2'),
-					url('../assets/fonts/SourceSansPro-Regular.woff') format('woff'),
-					url('../assets/fonts/SourceSansPro-Regular.ttf') format('truetype');
+		url('../assets/fonts/SourceSansPro-Regular.eot?#iefix') format('embedded-opentype'),
+		url('../assets/fonts/SourceSansPro-Regular.woff2') format('woff2'),
+		url('../assets/fonts/SourceSansPro-Regular.woff') format('woff'),
+		url('../assets/fonts/SourceSansPro-Regular.ttf') format('truetype');
 	font-weight: normal;
 	font-style: normal;
 	font-display: swap;
@@ -1362,17 +1362,20 @@ textarea.field-form {
 }
 
 @media screen and (max-width: 767px) {
-	
+
 	.contact-us-section {
 		padding-top: 45px;
 		padding-bottom: 30px;
 	}
+
 	.contact-us-section>.container {
-				max-width: 78%;
+		max-width: 78%;
 	}
+
 	.contact-us-section .section-title {
 		margin-bottom: 30px;
 	}
+
 	.form-contact-us {
 		max-width: 92%;
 		margin: 0 auto;
@@ -1382,6 +1385,7 @@ textarea.field-form {
 		gap: 6px 6.5px;
 		border: none;
 	}
+
 	.get-in-touch-block,
 	.credit-follow-block {
 		order: 2;
@@ -1433,13 +1437,13 @@ textarea.field-form {
 		width: 11px;
 		height: 17px;
 	}
-	
+
 	.mail-p::before {
 		width: 17px;
 		height: 10px;
 		top: 2px;
 	}
-	
+
 	.phone-p::before {
 		width: 12px;
 		height: 17px;
@@ -1453,7 +1457,7 @@ textarea.field-form {
 	}
 
 	.phone-link:not(:last-of-type)::after {
-		content: ',' '\2002';
+		content: ',''\2002';
 
 	}
 
@@ -1469,12 +1473,12 @@ textarea.field-form {
 		margin-bottom: 9px;
 	}
 
-.follows-list {
+	.follows-list {
 		width: 166px;
 		display: grid;
 		grid-template-columns: repeat(6, 1fr);
 		gap: 19px;
-	} 
+	}
 
 	.follows-list .soc-link {
 		font-size: 13px;
@@ -1620,13 +1624,15 @@ textarea.field-form {
 	}
 
 	.footer-copyright-follow {
+		flex-direction: column;
 		justify-content: center;
 		padding-top: 23px;
 	}
 
 	.footer-follows-list {
 		margin-bottom: 28px;
-		flex-basis: 200px;
+		flex-basis: 20px;
+		min-width: 200px;
 		order: 1;
 	}
 

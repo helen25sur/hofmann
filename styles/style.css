@@ -1,6 +1,55 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+@font-face {
+	font-family: 'Montserrat';
+	src: url('../assets/fonts/Montserrat-Regular.eot');
+	src: local('../assets/fonts/Montserrat Regular'), local('Montserrat-Regular'),
+					url('../assets/fonts/Montserrat-Regular.eot?#iefix') format('embedded-opentype'),
+					url('../assets/fonts/Montserrat-Regular.woff2') format('woff2'),
+					url('../assets/fonts/Montserrat-Regular.woff') format('woff'),
+					url('../assets/fonts/Montserrat-Regular.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
+}
 
-@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;700&display=swap');
+@font-face {
+	font-family: 'Montserrat';
+	src: url('../assets/fonts/Montserrat-Bold.eot');
+	src: local('../assets/fonts/Montserrat Bold'), local('Montserrat-Bold'),
+					url('../assets/fonts/Montserrat-Bold.eot?#iefix') format('embedded-opentype'),
+					url('../assets/fonts/Montserrat-Bold.woff2') format('woff2'),
+					url('../assets/fonts/Montserrat-Bold.woff') format('woff'),
+					url('../assets/fonts/Montserrat-Bold.ttf') format('truetype');
+	font-weight: bold;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Source Sans Pro';
+	src: url('../assets/fonts/SourceSansPro-Bold.eot');
+	src: local('../assets/fonts/Source Sans Pro Bold'), local('SourceSansPro-Bold'),
+					url('../assets/fonts/SourceSansPro-Bold.eot?#iefix') format('embedded-opentype'),
+					url('../assets/fonts/SourceSansPro-Bold.woff2') format('woff2'),
+					url('../assets/fonts/SourceSansPro-Bold.woff') format('woff'),
+					url('../assets/fonts/SourceSansPro-Bold.ttf') format('truetype');
+	font-weight: bold;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Source Sans Pro';
+	src: url('../assets/fonts/SourceSansPro-Regular.eot');
+	src: local('../assets/fonts/Source Sans Pro Regular'), local('SourceSansPro-Regular'),
+					url('../assets/fonts/SourceSansPro-Regular.eot?#iefix') format('embedded-opentype'),
+					url('../assets/fonts/SourceSansPro-Regular.woff2') format('woff2'),
+					url('../assets/fonts/SourceSansPro-Regular.woff') format('woff'),
+					url('../assets/fonts/SourceSansPro-Regular.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
+}
+
 
 * {
 	box-sizing: border-box;
@@ -265,15 +314,6 @@ section:nth-of-type(odd) {
 		position: relative;
 	}
 
-	/* #mobile-menu-trriger:checked~.navbar>.container>.main-nav>.hidden-label {
-		position: absolute;
-		top: 0;
-		bottom: 0;
-		right: 0;
-		left: 0;
-		z-index: 1;
-	} */
-
 	#mobile-menu-trriger:checked~.navbar>.container>.logo,
 	#mobile-menu-trriger:checked~.navbar>.container>.fa-bars {
 		display: none;
@@ -329,7 +369,6 @@ section:nth-of-type(odd) {
 	.soc-link {
 		font-size: 20px;
 	}
-
 }
 
 /* ===== Styles Hero-section ===== */
@@ -596,33 +635,40 @@ section:nth-of-type(odd) {
 		padding-top: 14px;
 	}
 
+	.pricing-list-item:hover {
+		transform: scale(1);
+	}
 
-
-	.silver {
+	.pricing-list-item.silver {
 		transform: translate3d(-188px, -39px, -120px);
 		order: 2;
 	}
 
-	.gold {
+	.pricing-list-item.gold,
+	#price-gold-trigger:checked~.pricing-plan-list>.gold {
 		transform: translate3d(4px, 0, 3px);
 		order: 1;
 	}
 
-	.platinum {
+	.pricing-list-item.platinum {
 		transform: translate3d(-380px, -82px, -240px);
 		order: 3;
 	}
 
-	.silver:hover {
-		transform: scale(1) translate3d(-188px, -39px, -120px);
+	#price-silver-trigger:checked~.pricing-plan-list>.silver {
+		transform: translate3d(-188px, 0, 4px);
 	}
 
-	.gold:hover {
-		transform: scale(1) translate3d(4px, 0, 3px);
+	#price-silver-trigger:checked~.pricing-plan-list>.gold {
+		transform: translate3d(4px, -39px, -120px);
 	}
 
-	.platinum:hover {
-		transform: scale(1) translate3d(-380px, -82px, -240px);
+	#price-platinum-trigger:checked~.pricing-plan-list>.platinum {
+		transform: translate3d(-380px, 0px, 4px);
+	}
+
+	#price-platinum-trigger:checked~.pricing-plan-list>.gold {
+		transform: translate3d(4px, -76px, -210px);
 	}
 
 	.plan-name {
@@ -677,36 +723,6 @@ section:nth-of-type(odd) {
 		text-transform: uppercase;
 		color: #4B4B4B;
 	}
-
-	/* #price-gold-trigger:checked~.pricing-plan-list>.gold {
-		transform: translate3d(-135px, 0px, 10px);
-		
-	}
-
-	#price-silver-trigger:checked~.pricing-plan-list>.silver {
-		transform: translate3d(50px, 0px, 10px);
-		
-	}
-
-	#price-silver-trigger:checked~.pricing-plan-list>.gold {
-		transform: translate3d(-140px, -35px, -100px);
-	}
-
-	#price-silver-trigger:checked~.pricing-plan-list>.platinum {
-		transform: translate3d(-330px, -85px, -250px);
-	}
-
-	#price-platinum-trigger:checked~.pricing-plan-list>.platinum {
-		transform: translate3d(-315px, -0px, 10px);
-	}
-
-	#price-platinum-trigger:checked~.pricing-plan-list>.gold {
-		transform: translate3d(-130px, -35px, -100px);
-	}
-
-	#price-platinum-trigger:checked~.pricing-plan-list>.silver {
-		transform: translate3d(55px, -85px, -250px);
-	} */
 
 	.label-choice-price {
 		border-radius: 48px;
@@ -878,6 +894,10 @@ input[name="type-design"] {
 }
 
 @media screen and (max-width: 767px) {
+	.our-project-section>.container {
+		max-width: 95%;
+		margin: 0 auto;
+	}
 
 	.product-design-section,
 	.graphic-design-section,
@@ -914,7 +934,7 @@ input[name="type-design"] {
 	}
 
 	.item-theme-project:first-of-type {
-		padding-right: 24px;
+		padding-right: 18px;
 		border: 1px solid #4B4B4B;
 		border-radius: 48px;
 		background-image: url('../assets/images/svg/triangle.svg');
@@ -930,7 +950,7 @@ input[name="type-design"] {
 		font-size: 12px;
 		line-height: 16px;
 		text-align: center;
-		letter-spacing: 0.8px;
+		letter-spacing: 0.2px;
 	}
 
 	/* Оформила как-будто выпадающий список, так как сначала хотела сверстать второй блок в виде select>option но так не сработало, перестал работать переход по вкладкам, поэтому ради того, чтобы оставить хоть такую функциональность, пришлось реализовывать таким образом */
@@ -981,6 +1001,8 @@ input[name="type-design"] {
 }
 
 .user-avatar {
+	width: 80px;
+	height: 80px;
 	border-radius: 50%;
 	border: 1px solid #AFAFAF;
 }
@@ -1044,7 +1066,47 @@ input[name="type-design"] {
 	}
 }
 
-@media screen and (max-width: 767px) {}
+@media screen and (max-width: 767px) {
+	.our-team-section {
+		padding-bottom: 71px;
+	}
+
+	.our-team-section .section-title {
+		margin-bottom: 11px;
+	}
+
+	.our-team-list {
+		display: grid;
+		grid-template-columns: repeat(auto-fill, minmax(271px, 1fr));
+		grid-template-rows: repeat(auto-fill, minmax(64px, 1fr));
+		row-gap: 40px;
+	}
+
+	.our-team-list-item {
+		padding-top: 0;
+	}
+
+	.user-avatar {
+		width: 48px;
+		height: 48px;
+		border-width: 2px;
+	}
+
+	.user-name {
+		font-size: 12px;
+		line-height: 16px;
+	}
+
+	.profession {
+		margin-bottom: 8px;
+		font-size: 11px;
+		line-height: 16px;
+	}
+
+	.prof-description {
+		max-width: 200px;
+	}
+}
 
 /* ===== Styles Contact us-section ===== */
 
@@ -1299,7 +1361,125 @@ textarea.field-form {
 	}
 }
 
-@media screen and (max-width: 767px) {}
+@media screen and (max-width: 767px) {
+	
+	.contact-us-section {
+		padding-top: 45px;
+		padding-bottom: 30px;
+	}
+	.contact-us-section>.container {
+				max-width: 78%;
+	}
+	.contact-us-section .section-title {
+		margin-bottom: 30px;
+	}
+	.form-contact-us {
+		max-width: 92%;
+		margin: 0 auto;
+		order: 1;
+		padding: 0;
+		padding-bottom: 46px;
+		gap: 6px 6.5px;
+		border: none;
+	}
+	.get-in-touch-block,
+	.credit-follow-block {
+		order: 2;
+	}
+
+	.field-label,
+	.field-form,
+	.field-form::placeholder {
+		font-size: 11px;
+		line-height: 14px;
+		letter-spacing: 0.11px;
+	}
+
+	.field-form {
+		padding: 6px;
+		border-width: 0.5px;
+		border-radius: 2px;
+	}
+
+	.field-label-message {
+		display: inline-block;
+		margin-top: 6px;
+	}
+
+	textarea.field-form {
+		height: 64px;
+	}
+
+	.contact-form-btn {
+		max-width: 112px;
+		margin-top: 6px;
+		padding: 6px 8px;
+		font-size: 8.53333px;
+		line-height: 10px;
+	}
+
+	.subsection-title {
+		font-size: 12px;
+		line-height: 24px;
+	}
+
+	.get-in-touch-block {
+		max-width: 100%;
+		min-height: 122px;
+		padding-bottom: 27px;
+	}
+
+	.address-p::before {
+		width: 11px;
+		height: 17px;
+	}
+	
+	.mail-p::before {
+		width: 17px;
+		height: 10px;
+		top: 2px;
+	}
+	
+	.phone-p::before {
+		width: 12px;
+		height: 17px;
+		top: -1px;
+	}
+
+	.phone-p {
+		width: 100%;
+		flex-direction: row;
+		justify-content: flex-start;
+	}
+
+	.phone-link:not(:last-of-type)::after {
+		content: ',' '\2002';
+
+	}
+
+	.credits-block {
+		padding-bottom: 11px;
+	}
+
+	.credits-block .subsection-title {
+		margin-bottom: 13px;
+	}
+
+	.follows-block .subsection-title {
+		margin-bottom: 9px;
+	}
+
+.follows-list {
+		width: 166px;
+		display: grid;
+		grid-template-columns: repeat(6, 1fr);
+		gap: 19px;
+	} 
+
+	.follows-list .soc-link {
+		font-size: 13px;
+	}
+}
 
 /* ===== Styles Footer ===== */
 
@@ -1403,4 +1583,54 @@ textarea.field-form {
 	}
 }
 
-@media screen and (max-width: 767px) {}
+@media screen and (max-width: 767px) {
+	.main-footer {
+		padding: 28px 0;
+	}
+
+	.footer-submenu {
+		border-color: #4B4B4B;
+		justify-content: space-around;
+	}
+
+	.submenu {
+		flex-basis: 36%;
+		padding-bottom: 34px;
+	}
+
+	.submenu-title {
+		padding-bottom: 12px;
+		font-size: 12px;
+		line-height: 15px;
+		letter-spacing: 0.8px;
+		border-color: #4B4B4B;
+	}
+
+	.submenu-list {
+		padding-top: 12px;
+	}
+
+	.submenu-item+.submenu-item {
+		margin-top: 6px;
+	}
+
+	.submenu-item-link {
+		font-size: 11px;
+		line-height: 16px;
+	}
+
+	.footer-copyright-follow {
+		justify-content: center;
+		padding-top: 23px;
+	}
+
+	.footer-follows-list {
+		margin-bottom: 28px;
+		flex-basis: 200px;
+		order: 1;
+	}
+
+	.copyright {
+		order: 2;
+	}
+}

@@ -294,6 +294,7 @@ section:nth-of-type(odd) {
 	.mobile-nav-icon.fa-bars {
 		display: block;
 		font-size: 20px;
+		padding: 5px;
 	}
 
 	#s-pricing:target,
@@ -321,10 +322,9 @@ section:nth-of-type(odd) {
 
 	#mobile-menu-trriger:checked~.navbar>.container>.fa-times {
 		display: block;
-		margin: 5px auto;
+		padding: 5px;
 		margin-top: 50px;
 		font-size: 20px;
-		align-self: start;
 	}
 
 	#mobile-menu-trriger:checked~.navbar {
@@ -338,6 +338,8 @@ section:nth-of-type(odd) {
 	}
 
 	#mobile-menu-trriger:checked~.navbar>.container {
+		flex-direction: column;
+		justify-content: space-between;
 		min-height: 100vh;
 		min-height: -webkit-fill-available;
 	}
@@ -349,26 +351,29 @@ section:nth-of-type(odd) {
 
 	#mobile-menu-trriger:checked~.navbar>.container>.main-nav {
 		flex-direction: column;
-		justify-content: space-around;
+		justify-content: center;
 		align-items: center;
 	}
 
 	.nav-link {
+		padding-top: 15px;
+		padding-bottom: 15px;
 		text-transform: none;
 	}
 
-	.nav-link+.nav-link {
-		margin-top: 30px;
-	}
+	/* Паддинги чтобы увеличить область таба */
 
 	.social-links {
-		flex-basis: 95px;
+		flex-basis: 100px;
 		margin: 0 auto;
 	}
 
 	.soc-link {
 		font-size: 20px;
+		padding: 5px;
 	}
+
+	/* С меню получилось интересный эффект наезжания блока на открытое меню. Вряд ли кто-то так делает, конечно, но прикольно. Не стала добавлять JS, чтобы еще больше не затягивать сдачу дз */
 }
 
 /* ===== Styles Hero-section ===== */
@@ -648,6 +653,7 @@ section:nth-of-type(odd) {
 	#price-gold-trigger:checked~.pricing-plan-list>.gold {
 		transform: translate3d(4px, 0, 3px);
 		order: 1;
+		transition: all 0.4s ease-in-out;
 	}
 
 	.pricing-list-item.platinum {
@@ -657,6 +663,7 @@ section:nth-of-type(odd) {
 
 	#price-silver-trigger:checked~.pricing-plan-list>.silver {
 		transform: translate3d(-188px, 0, 4px);
+		transition: all 0.4s ease-in-out;
 	}
 
 	#price-silver-trigger:checked~.pricing-plan-list>.gold {
@@ -665,11 +672,14 @@ section:nth-of-type(odd) {
 
 	#price-platinum-trigger:checked~.pricing-plan-list>.platinum {
 		transform: translate3d(-380px, 0px, 4px);
+		transition: all 0.4s ease-in-out;
 	}
 
 	#price-platinum-trigger:checked~.pricing-plan-list>.gold {
 		transform: translate3d(4px, -76px, -210px);
 	}
+
+	/* Добавила совсем небольшой transition, чтобы не так резко изменялись карточки. Весить дополнительно анимацию с ключевыми кадрами не стала */
 
 	.plan-name {
 		margin-bottom: 0;
@@ -748,9 +758,6 @@ section:nth-of-type(odd) {
 		color: #EBCB80;
 	}
 
-	/* .pricing-list-item:hover {
-		transform: scale(1);
-	} */
 }
 
 /* ===== Styles Our project-section ===== */
@@ -879,6 +886,14 @@ input[name="type-design"] {
 		letter-spacing: 0.8px;
 	}
 
+	.product-design-section,
+	.graphic-design-section,
+	.interior-design-section,
+	.web-design-section,
+	.app-design-section {
+		animation: none;
+	}
+
 	.design-list {
 		grid-template:
 			repeat(auto-fill, 224px) / repeat(auto-fill, max(218px));
@@ -924,11 +939,6 @@ input[name="type-design"] {
 		margin: 0 auto;
 	}
 
-	/* input[name="type-design"]:checked~.list-theme-project>.item-theme-project:not(:first-child)+.item-theme-project {
-		display: none;
-	} */
-
-
 
 	.list-theme-project:hover .item-theme-project {
 		display: block;
@@ -962,13 +972,19 @@ input[name="type-design"] {
 	}
 
 	.theme-project-link {
+		display: block;
 		font-size: 12px;
 		line-height: 16px;
 		text-align: center;
 		letter-spacing: 0.2px;
 	}
 
-	/* Оформила как-будто выпадающий список, так как сначала хотела сверстать второй блок в виде select>option но так не сработало, перестал работать переход по вкладкам, поэтому ради того, чтобы оставить хоть такую функциональность, пришлось реализовывать таким образом */
+	.theme-project-link:not(:first-of-type) {
+		padding: 4px 0;
+	}
+
+	/* Оформила как-будто выпадающий список, так как сначала хотела сверстать второй блок в виде select>option но так не сработало, перестал работать переход по вкладкам, поэтому ради того, чтобы оставить хоть такую функциональность, пришлось реализовывать таким образом
+	Хотела добиться, чтобы выбранный пункт становился первым в списке - это удалось, но так, чтобы при этом список еще и сворачивался - нет */
 
 	.views-likes-comments-block {
 		display: none;
@@ -1392,7 +1408,7 @@ textarea.field-form {
 	}
 
 	.form-contact-us {
-		max-width: 92%;
+		min-width: 92%;
 		margin: 0 auto;
 		order: 1;
 		padding: 0;
@@ -1401,9 +1417,14 @@ textarea.field-form {
 		border: none;
 	}
 
+	.form-contact-us:hover {
+		box-shadow: none;
+	}
+
 	.get-in-touch-block,
 	.credit-follow-block {
 		order: 2;
+		margin: 0 auto;
 	}
 
 	.field-label,

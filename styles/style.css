@@ -217,6 +217,8 @@ section:nth-of-type(odd) {
 	flex-basis: 470px;
 }
 
+/* Лучше наследуемые стили задавать родителю, чтобы браузер выполнял их один раз, а не каждый раз в пункте меню */
+
 .nav-link {
 	font-size: 18px;
 	font-weight: bold;
@@ -428,7 +430,8 @@ section:nth-of-type(odd) {
 
 @media screen and (max-width: 767px) {
 	.hero-section {
-		background-image: linear-gradient(220deg, #FFFFFF, #DADADA);
+		background-position: 65% center;
+		/* background-image: linear-gradient(220deg, #FFFFFF, #DADADA); */
 	}
 
 	.slogan-text {

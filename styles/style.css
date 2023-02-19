@@ -76,6 +76,15 @@ section:nth-of-type(odd) {
 	background-color: #fff;
 }
 
+a, button,
+.pricing-list-item,
+.design-list-item img,
+.form-contact-us {
+  transition: transform 0.5s ease-in-out, color 0.5s ease-in-out, background-color 0.5s ease-in-out, box-shadow 0.5s ease-in-out, text-transform 0.5s ease-in-out;
+
+  
+}
+
 .container {
 	max-width: 1170px;
 	margin: 0 auto;

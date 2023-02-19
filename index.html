@@ -5,6 +5,7 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 	<title>HOFMANN</title>
+  <script src="assets/scripts/index.js" defer></script>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 	<link rel="stylesheet" href="styles/reset.css">
@@ -15,27 +16,22 @@
 
 	<!-- =============== Header navbar ================== -->
 
-	<input type="checkbox" id="mobile-menu-trriger">
-	<header class="navbar">
+	<header id="navbar" class="navbar">
 		<div class="container f-row">
-			<label for="mobile-menu-trriger" class="mobile-nav-icon fas fa-times g-t-color"></label>
 			<a class="logo" href="index.html">
 				<img class="logo-img" src="assets/images/svg/logo.svg" alt="Hofmann logotype"></a>
 
-			<!-- Попробовать нарисовать эти иконки в цсс -->
-			<label for="mobile-menu-trriger" class="mobile-nav-icon fas fa-bars g-t-color"></label>
+			<button class="mobile-nav-icon fas fa-bars g-t-color"></button>
 
-			<!-- завернуть в один див, чтобы легче было манипулировать при мобильном адаптиве, к слову забыла про flex-grow -->
 			<nav class="main-nav f-row">
 				<a href="#s-pricing" class="nav-link g-t-color">
 					Pricing </a>
 
-				<a href="#s-project" class="nav-link g-t-color">Projects</label></a>
+				<a href="#s-project" class="nav-link g-t-color">Projects</a>
 
 				<a href="#s-team" class="nav-link g-t-color">Team</a>
 
 				<a href="#s-contact" class="nav-link g-t-color">Contact us</a>
-
 			</nav>
 
 			<div class="social-links f-row">
